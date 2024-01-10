@@ -240,15 +240,22 @@ create_window:
 
     mov [WindowClassEx + 20], eax
 
-    ;Cursor
-    ;push dword IDC_ARROW
-    ;push dword 0
-    ;call LoadCursor
-
+    mov eax, dword [ebp_cursor]
+    cmp eax, 0
+    jne continue
 
     push dword [ebp_cursor]
     call LoadCursorFromFile
     mov [WindowClassEx + 24], eax
+    
+    jmp continue_on
+
+    continue:
+    push dword IDC_ARROW
+    push dword 0
+    call LoadCursor
+
+    continue_on:
 
     ; background
     mov [WindowClassEx + 28], dword COLOR_WINDOW

@@ -17,7 +17,7 @@ _main:
     push dword WindowName     ;    title
     push dword 400            ;    width
     push dword 400            ;    height
-    push dword cursor         ;    cursor path
+    push dword cursor         ;    cursor path (0 for default)
     push dword icon           ;    icon path
     push dword STYLE_DEFAULT  ;    style options, can also use the win32 styles directly
 
