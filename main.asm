@@ -14,12 +14,12 @@ func:
     ret
 
 _main:
-    push dword WindowName
-    push dword 400
-    push dword 400
-    push dword cursor
-    push dword icon
-    push dword STYLE_DEFAULT
+    push dword WindowName     ;    title
+    push dword 400            ;    width
+    push dword 400            ;    height
+    push dword cursor         ;    cursor path
+    push dword icon           ;    icon path
+    push dword STYLE_DEFAULT  ;    style options, can also use the win32 styles directly
 
     call create_window
 
