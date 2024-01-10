@@ -2,6 +2,7 @@
 *.d
 
 # Object files
+*.obj
 *.o
 *.ko
 *.obj
@@ -41,6 +42,10 @@
 *.su
 *.idb
 *.pdb
+*.bat
+*.exe
+*.cur
+*.png
 
 # Kernel Module Compile Results
 *.mod*
